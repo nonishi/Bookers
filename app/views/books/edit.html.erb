@@ -1,2 +1,28 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<h1>Editing Book</h1>
+<div class="error-box">
+  <% if @book.errors.any? %>
+    <p class="error-count">
+      <%= @book.errors.count %>件のエラーが発生しました
+    </p>
+    <% @book.errors.full_messages.each do |message| %>
+      <ul>
+        <li><%= message %></li>
+      </ul>
+    <% end %>
+  <% end %>
+</div>
+<%= form_with model:@book, local: true do |f| %>
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+  <h4>Body</h4>
+  <%= f.text_field :body %>
+  <div class="update">
+    <%= f.submit "Update Book" %>
+  </div>
+<% end %>
+
+<div class="action">
+  <%= link_to "Show", book_path(@book) %>
+  <span>|</span>
+  <%= link_to "Back", books_path %>
+</div>
