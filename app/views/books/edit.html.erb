@@ -1,27 +1,26 @@
 <h1>Editing Book</h1>
 <div class="error-box">
   <% if @book.errors.any? %>
-    <p class="error-count">
+    <span class="error-count">
       <%= @book.errors.count %>件のエラーが発生しました
-    </p>
+    </span>
     <% @book.errors.full_messages.each do |message| %>
-      <ul>
+      <ul class="e-message">
         <li><%= message %></li>
       </ul>
     <% end %>
   <% end %>
 </div>
-<%= form_with model:@book, local: true do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-  <h4>Body</h4>
-  <%= f.text_field :body %>
-  <div class="update">
+<div class="edit-form">
+  <%= form_with model:@book, local: true do |f| %>
+    <h4>Title</h4>
+    <div class="text_field"><%= f.text_field :title %></div>
+    <h4>Body</h4>
+    <div class="text_field"><%= f.text_area :body %></div>
     <%= f.submit "Update Book" %>
-  </div>
-<% end %>
-
-<div class="action">
+  <% end %>
+</div>
+<div class="edit-action">
   <%= link_to "Show", book_path(@book) %>
   <span>|</span>
   <%= link_to "Back", books_path %>

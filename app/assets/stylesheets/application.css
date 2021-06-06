@@ -21,17 +21,102 @@
   font-family: verdana, arial, helvetica, sans-serif;
 }
 
-h1,h2{
-  margin: 33px;
-}
-
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+p, ol, ul, td{
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
 }
 
-.start{
+h1{
+  margin: 33px;
+}
+
+.top-page{
+  margin-left: 66px;
+  line-height: 60px;
+}
+
+.start-link{
+  margin-left: 66px;
+}
+
+table{
+  width: 65%;
   margin-left: 33px;
+}
+
+.t-title{
+  width: 25%;
+}
+
+.t-body{
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.t-action{
+  width: 25%;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h2{
+  margin: 20px 33px;
+}
+
+.new{
+  margin-left: 33px;
+}
+
+.text_field{
+  margin-bottom: 10px;
+}
+
+.create{
+  margin-top: 10px;
+}
+
+.show-form{
+  margin-left: 66px;
+}
+
+.show-action{
+  margin-left: 33px;
+}
+
+.edit-form{
+  margin-left: 33px;
+}
+
+.edit-action{
+  margin-left: 33px;
+  margin-top: 10px;
+}
+
+#notice{
+  color: green;
+}
+
+.error-box{
+  margin-left: 33px;
+}
+
+.error-count{
+  color: #fff;
+  background-color: red;
+}
+
+.e-message{
+  color: red;
+}
+
+a:hover{
+  color: white;
+  background-color: black;
 }
