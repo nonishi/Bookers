@@ -2,7 +2,7 @@
 <div class="error-box">
   <% if @book.errors.any? %>
     <span class="error-count">
-      <%= @book.errors.count %>件のエラーが発生しました
+      <%= @book.errors.count %>error prohibited this book from being saved:
     </span>
     <% @book.errors.full_messages.each do |message| %>
       <ul class="e-message">
